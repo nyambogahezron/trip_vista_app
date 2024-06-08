@@ -1,15 +1,29 @@
-import { Stack } from 'expo-router';
-import { View, Text } from 'react-native';
-const TabsLayout = () => {
+import FontAwesome from '@expo/vector-icons/FontAwesome';
+import { Tabs } from 'expo-router';
+
+const TabLayout= () =>{
   return (
-    <>
-      <Stack>
-        <Stack.Screen name='home' options={{ headerShown: false }} />
-        <Stack.Screen name='explore' options={{ headerShown: false }} />
-        <Stack.Screen name='Favorite' options={{ headerShown: false }} />
-        <Stack.Screen name='Profile' options={{ headerShown: false }} />
-      </Stack>
-    </>
+    <Tabs screenOptions={{ tabBarActiveTintColor: 'blue' }}>
+      <Tabs.Screen
+        name='home'
+        options={{
+          title: 'Home',
+          tabBarIcon: ({ color }) => (
+            <FontAwesome size={28} name='home' color={color} />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name='explore'
+        options={{
+          title: 'Explore',
+          tabBarIcon: ({ color }) => (
+            <FontAwesome size={28} name='cog' color={color} />
+          ),
+        }}
+      />
+    </Tabs>
   );
-};
-export default TabsLayout;
+}
+
+export default TabLayout;
