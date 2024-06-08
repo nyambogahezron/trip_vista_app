@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "trip_vista_app",
-    "slug": "trip_vista_app",
+    "name": "TripVista",
+    "slug": "TripVista",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
