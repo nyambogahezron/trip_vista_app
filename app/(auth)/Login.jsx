@@ -1,9 +1,52 @@
-import { View, Text } from 'react-native'
+import React from 'react';
+import { View, Text, TextInput, Image, TouchableOpacity } from 'react-native';
+import CustomButton from '../../components/CustomButton';
+import { router } from 'expo-router';
+import AuthHeader from '../../components/AuthHeader';
+import AuthFooter from '../../components/AuthFooter';
+
 const Login = () => {
   return (
-    <View>
-      <Text>Login</Text>
+    <View className='flex-1 bg-white h-full'>
+      <AuthHeader title='Sign In' />
+
+      <View className='p-8'>
+        <Text className='text-2xl text-blue-800 font-pbold mt-4 text-center'>
+          Welcome To Back TripVista
+        </Text>
+
+        <TextInput
+          className='mt-8 border-b-2 border-gray-300 pb-2'
+          placeholder='Email'
+          secureTextEntry
+        />
+
+        <TextInput
+          className='mt-8 border-b-2 border-gray-300 pb-2'
+          placeholder='Password'
+          secureTextEntry
+        />
+        <TouchableOpacity className='mt-2'>
+          <Text className='text-blue-500'>Forgot Password?</Text>
+        </TouchableOpacity>
+
+        <CustomButton
+          title='SIGN IN'
+          handlePress={() => router.push('/home')}
+          customStyles={
+            'border bg-blue-800 py-3 mt-8 rounded-full items-center'
+          }
+          textStyles={'text-white text-lg'}
+        />
+
+        <AuthFooter
+          title='Sign Up'
+          desc={`Don't Have An Account?`}
+          link='/register'
+        />
+      </View>
     </View>
-  )
-}
-export default Login
+  );
+};
+
+export default Login;

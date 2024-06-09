@@ -18,8 +18,7 @@ const WelcomeScreen = () => {
             Escape the ordinary life
           </Text>
           <Text className='text-lg text-center mb-5 text-gray-500 font-pmedium'>
-            Discover great experiences around you and make you live interesting{' '}
-            <Text className='text-red-400'>!</Text>
+            Discover great experiences around you and make you live interesting!
           </Text>
         </View>
 
@@ -32,7 +31,7 @@ const WelcomeScreen = () => {
           />
           <CustomButton
             title='Login'
-            handlePress={() => router.push('/login')}
+            handlePress={() => router.push('/(auth)/login')}
             customStyles={'border border-blue-300 w-full text-center'}
           />
         </View>
