@@ -9,7 +9,6 @@ const Login = () => {
   return (
     <View className='flex-1 bg-white h-full'>
       <AuthHeader title='Sign In' />
-
       <View className='p-8'>
         <Text className='text-2xl text-blue-800 font-pbold mt-4 text-center'>
           Welcome To Back TripVista
