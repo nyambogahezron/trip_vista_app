@@ -25,7 +25,7 @@ const WelcomeScreen = () => {
         <View className='p-2 w-full items-center mb-5'>
           <CustomButton
             title='Get Started'
-            handlePress={() => router.push('/home')}
+            handlePress={() => router.push('/(tabs)')}
             customStyles={'w-full text-center  bg-[#5EDFFF] mb-5 rounded-md'}
             textStyles={'font-psemibold'}
           />

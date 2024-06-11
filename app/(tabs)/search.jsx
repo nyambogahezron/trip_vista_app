@@ -1,9 +1,9 @@
 import { View, Text } from 'react-native'
-const Home = () => {
+const Search = () => {
   return (
     <View>
-      <Text>Home</Text>
+      <Text>Search</Text>
     </View>
   )
 }
-export default Home
+export default Search
