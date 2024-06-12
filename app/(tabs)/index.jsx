@@ -11,6 +11,7 @@ import {
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import CategoriesButtons from '../../components/CategoriesButtons';
+import Listing from '../../components/Listing';
 const HomePage = () => {
   return (
     <SafeAreaView className='bg-bgColor h-screen'>
@@ -66,31 +67,10 @@ const HomePage = () => {
       {/* Listings */}
       <ScrollView className='p-4'>
         <View className='flex-row justify-between mb-4'>
-          <TouchableOpacity className='bg-gray-100 p-4 rounded-lg w-40'>
-            <Image
-              source={{
-                uri: 'https://thumbs.dreamstime.com/b/idyllic-summer-landscape-clear-mountain-lake-alps-45054687.jpg',
-              }}
-              className='h-24 w-full rounded-lg'
-            />
-            <Text className='text-lg font-bold mt-2'>
-              Tropical Paradise Resort
-            </Text>
-            <Text className='text-gray-500'>Pacific Ocean</Text>
-            <Text className='text-orange-500 mt-1'>$150</Text>
-          </TouchableOpacity>
-          <TouchableOpacity className='bg-gray-100 p-4 rounded-lg w-40'>
-            <Image
-              source={{
-                uri: 'https://thumbs.dreamstime.com/b/idyllic-summer-landscape-clear-mountain-lake-alps-45054687.jpg',
-              }}
-              className='h-24 w-full rounded-lg'
-            />
-            <Text className='text-lg font-bold mt-2'>Alpine Chalet</Text>
-            <Text className='text-gray-500'>Switzerland</Text>
-            <Text className='text-orange-500 mt-1'>$200</Text>
-          </TouchableOpacity>
+          <Listing />
+         
         </View>
+    
       </ScrollView>
     </SafeAreaView>
   );
