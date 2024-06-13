@@ -2,7 +2,8 @@ let travelAgency = [
   {
     id: 1,
     name: 'Travel Experts',
-    image: 'travel_experts.jpg',
+    image:
+      'https://netstorage-tuko.akamaized.net/images/039181e913feda51.jpg?imwidth=900',
     rating: 4.5,
     reviews: 4007,
   },

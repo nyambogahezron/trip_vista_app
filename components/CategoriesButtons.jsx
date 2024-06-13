@@ -36,7 +36,7 @@ const CategoriesButtons = ({ setSelectedCategory, selectedCategory }) => {
             ref={(itemRefs.current[index] = useRef())}
             key={category.id}
             onPress={() => handleButtonPress(category.id, category.title)}
-            className={`flex-row items-center px-2 py-2 mx-1 rounded-[14px] ${
+            className={`flex-row items-center px-2 py-2 mx-1 rounded-lg ${
               selectedCategory === category.title
                 ? 'bg-[#ff7f36] text-white'
                 : 'bg-white'
