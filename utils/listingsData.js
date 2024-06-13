@@ -1,0 +1,186 @@
+const listingsData = [
+  {
+    id: 1,
+    name: 'Beach Item 1',
+    image:
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmzY1kTRum1uX5q_t66hk6M_LzaFyT9j9dNA&s',
+    description: 'Description 1',
+    rating: 5,
+    price: 100,
+    duration: '1 hour',
+    location: 'Beach Location 1',
+    category: 'Beaches',
+  },
+  {
+    id: 2,
+    name: 'Beach Item 2',
+    image:
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmzY1kTRum1uX5q_t66hk6M_LzaFyT9j9dNA&s',
+    description: 'Description 2',
+    rating: 4,
+    price: 80,
+    duration: '2 hours',
+    location: 'Beach Location 2',
+    category: 'Beaches',
+  },
+  {
+    id: 3,
+    name: 'Beach Item 3',
+    image:
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmzY1kTRum1uX5q_t66hk6M_LzaFyT9j9dNA&s',
+    description: 'Description 3',
+    rating: 3,
+    price: 60,
+    duration: '3 hours',
+    location: 'Beach Location 3',
+    category: 'Beaches',
+  },
+  {
+    id: 4,
+    name: 'Beach Item 4',
+    image:
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmzY1kTRum1uX5q_t66hk6M_LzaFyT9j9dNA&s',
+    description: 'Description 4',
+    rating: 2,
+    price: 40,
+    duration: '4 hours',
+    location: 'Beach Location 4',
+    category: 'Beaches',
+  },
+  {
+    id: 9,
+    name: 'Sandy Cove Retreat',
+    image:
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmzY1kTRum1uX5q_t66hk6M_LzaFyT9j9dNA&s',
+    description: 'A serene beachfront cottage with stunning views.',
+    rating: 4.5,
+    price: 120,
+    duration: '2 hours',
+    location: 'Sandy Cove, Malibu',
+    category: 'Beaches',
+  },
+  {
+    id: 10,
+    name: 'Sunset Bliss Beach House',
+    image:
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmzY1kTRum1uX5q_t66hk6M_LzaFyT9j9dNA&s',
+    description:
+      'Relax in this cozy beach house with private access to the shore.',
+    rating: 4.2,
+    price: 90,
+    duration: '3 hours',
+    location: 'Sunset Beach, Hawaii',
+    category: 'Beaches',
+  },
+  {
+    id: 11,
+    name: 'Palm Paradise Resort',
+    image:
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmzY1kTRum1uX5q_t66hk6M_LzaFyT9j9dNA&s',
+    description: 'Luxurious beachfront resort surrounded by palm trees.',
+    rating: 4.8,
+    price: 180,
+    duration: '1 hour',
+    location: 'Palm Paradise, Bahamas',
+    category: 'Beaches',
+  },
+  {
+    id: 12,
+    name: 'Seashell Cove Cabins',
+    image:
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmzY1kTRum1uX5q_t66hk6M_LzaFyT9j9dNA&s',
+    description: 'Quaint cabins nestled along the shoreline.',
+    rating: 3.7,
+    price: 70,
+    duration: '4 hours',
+    location: 'Seashell Cove, Cape Cod',
+    category: 'Beaches',
+  },
+  {
+    id: 13,
+    name: 'Majestic Peak Lodge',
+    image:
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmzY1kTRum1uX5q_t66hk6M_LzaFyT9j9dNA&s',
+    description:
+      'Rustic log cabins at the base of a breathtaking mountain peak.',
+    rating: 4.6,
+    price: 150,
+    duration: '2 hours',
+    location: 'Majestic Peak, Colorado',
+    category: 'Mountains',
+  },
+  {
+    id: 14,
+    name: 'Cloudtop Retreat',
+    image:
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmzY1kTRum1uX5q_t66hk6M_LzaFyT9j9dNA&s',
+    description: 'Secluded chalets with panoramic views of the valley below.',
+    rating: 4.4,
+    price: 110,
+    duration: '3 hours',
+    location: 'Cloudtop Mountains, Switzerland',
+    category: 'Mountains',
+  },
+  {
+    id: 15,
+    name: 'Evergreen Escape',
+    image:
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmzY1kTRum1uX5q_t66hk6M_LzaFyT9j9dNA&s',
+    description: 'Cozy cabins surrounded by towering evergreen trees.',
+    rating: 4.9,
+    price: 200,
+    duration: '1 hour',
+    location: 'Evergreen Forest, Canada',
+    category: 'Mountains',
+  },
+  {
+    id: 16,
+    name: 'Mountain Item 1',
+    image:
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmzY1kTRum1uX5q_t66hk6M_LzaFyT9j9dNA&s',
+    description: 'Description 1',
+    rating: 5,
+    price: 100,
+    duration: '1 hour',
+    location: 'Mountain Location 1',
+    category: 'Mountains',
+  },
+  {
+    id: 17,
+    name: 'Mountain Item 2',
+    image:
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmzY1kTRum1uX5q_t66hk6M_LzaFyT9j9dNA&s',
+    description: 'Description 2',
+    rating: 4,
+    price: 80,
+    duration: '2 hours',
+    location: 'Mountain Location 2',
+    category: 'Mountains',
+  },
+  {
+    id: 18,
+    name: 'Mountain Item 3',
+    image:
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmzY1kTRum1uX5q_t66hk6M_LzaFyT9j9dNA&s',
+    description: 'Description 3',
+    rating: 3,
+    price: 60,
+    duration: '3 hours',
+    location: 'Mountain Location 3',
+    category: 'Mountains',
+  },
+  {
+    id: 19,
+    name: 'Mountain Item 4',
+    image:
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmzY1kTRum1uX5q_t66hk6M_LzaFyT9j9dNA&s',
+    description: 'Description 4',
+    rating: 2,
+    price: 40,
+    duration: '4 hours',
+    location: 'Mountain Location 4',
+    category: 'Mountains',
+  },
+];
+
+export default listingsData;

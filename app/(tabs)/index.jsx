@@ -11,8 +11,11 @@ import {
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import CategoriesButtons from '../../components/CategoriesButtons';
-import Listing from '../../components/Listing';
+import Listings from '../../components/Listings';
+import { useState } from 'react';
+
 const HomePage = () => {
+  const [selectedCategory, setSelectedCategory] = useState('All');
   return (
     <SafeAreaView className='bg-bgColor h-screen'>
       <StatusBar barStyle='dark-content' backgroundColor='#f3f3f3' />
@@ -62,15 +65,11 @@ const HomePage = () => {
       </View>
 
       {/* Categories */}
-      <CategoriesButtons />
+      <CategoriesButtons setSelectedCategory={setSelectedCategory} />
 
       {/* Listings */}
-      <ScrollView className='p-4'>
-        <View className='flex-row justify-between mb-4'>
-          <Listing />
-         
-        </View>
-    
+      <ScrollView className='p-4 '>
+        <Listings selectedCategory={selectedCategory} />
       </ScrollView>
     </SafeAreaView>
   );

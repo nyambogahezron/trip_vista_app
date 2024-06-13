@@ -3,7 +3,7 @@ import { FontAwesome } from '@expo/vector-icons';
 import categoriesData from '../utils/categoriesData';
 import { useRef, useState, useEffect } from 'react';
 
-const CategoriesButtons = () => {
+const CategoriesButtons = ({ setSelectedCategory }) => {
   const [isActiveIndex, setIsActiveIndex] = useState(1);
   const scrollRef = useRef(null);
   const itemRefs = useRef([]);
@@ -12,15 +12,16 @@ const CategoriesButtons = () => {
     itemRefs.current = itemRefs.current.slice(0, categoriesData.length);
   }, []);
 
-  const handlePress = (id) => {
+  const handleButtonPress = (id, title) => {
     setIsActiveIndex(id);
-
     // scroll item to the start on Active
     itemRefs.current[id - 1].current.measure(
       (fx, fy, width, height, px, py) => {
         scrollRef.current.scrollTo({ x: px, y: 0, animated: true });
       }
     );
+
+    setSelectedCategory(title);
   };
 
   return (
@@ -36,7 +37,7 @@ const CategoriesButtons = () => {
           <TouchableOpacity
             ref={(itemRefs.current[index] = useRef())}
             key={category.id}
-            onPress={() => handlePress(category.id)}
+            onPress={() => handleButtonPress(category.id, category.title)}
             className={`flex-row items-center px-2 py-2 mx-1 rounded-[14px] ${
               isActiveIndex === category.id
                 ? 'bg-[#ff7f36] text-white'
