@@ -2,6 +2,7 @@ import { View, Text, FlatList, Image } from 'react-native';
 import listingsData from '../utils/listingsData';
 import Listing from './Listing';
 import { useEffect, useState } from 'react';
+import TravelGroups from './TravelGroups';
 const Listings = ({ selectedCategory }) => {
   const [data, setData] = useState([]);
 
@@ -15,14 +16,13 @@ const Listings = ({ selectedCategory }) => {
       (item) => item.category === selectedCategory
     );
     setData(selectedData);
-    return () => {
-      setData([]);
-    };
+    // return () => {
+    //   setData([]);
+    // };
   }, [selectedCategory]);
 
-  console.log(selectedCategory);
   return (
-    <View className='flex h-full '>
+    <View className='flex ml-2'>
       <FlatList
         showsVerticalScrollIndicator={false}
         showsHorizontalScrollIndicator={false}
@@ -41,8 +41,10 @@ const Listings = ({ selectedCategory }) => {
             image={item.image}
             description={item.description}
             category={item.category}
+            selectedCategory={selectedCategory}
           />
         )}
+      
         // return when no listing found
         ListEmptyComponent={() => (
           <View className='flex flex-1 items-center ml-8 p-0 justify-center w-64 h-52 '>
