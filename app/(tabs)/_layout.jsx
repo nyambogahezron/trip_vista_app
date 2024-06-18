@@ -34,7 +34,7 @@ const TabLayout = () => {
           title: 'Categories',
           tabBarIcon: ({ color }) => (
             <MaterialIcons size={28} name='space-dashboard' color={color} />
-          ),
+          )
         }}
       />
       <Tabs.Screen

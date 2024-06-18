@@ -7,12 +7,14 @@ import {
   Animated,
   ImageRequireSource,
   StatusBar,
+  TouchableOpacity,
 } from 'react-native';
 import type { PagerViewOnPageScrollEventData } from 'react-native-pager-view';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import PagerView from 'react-native-pager-view';
 import * as Animatable from 'react-native-animatable';
 import data from '../utils/WelcomeSliderData';
+import { router } from 'expo-router';
 
 const { width, height } = Dimensions.get('window');
 const DOT_SIZE = 40;
@@ -262,6 +264,7 @@ export default function WelcomePage() {
           </View>
         ))}
       </AnimatedPagerView>
+      <TouchableOpacity  onPress={() => router.push('/(tabs)')}>
       <Animatable.View
         animation={'pulse'}
         easing='ease-in-out'
@@ -286,6 +289,7 @@ export default function WelcomePage() {
           Go
         </Text>
       </Animatable.View>
+      </TouchableOpacity>
       <Pagination
         scrollOffsetAnimatedValue={scrollOffsetAnimatedValue}
         positionAnimatedValue={positionAnimatedValue}

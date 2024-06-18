@@ -1,10 +1,8 @@
 import {
   View,
   Text,
-  Image,
   Dimensions,
   TouchableOpacity,
-  ScrollView,
   StyleSheet,
 } from 'react-native';
 import { Stack, useLocalSearchParams, useRouter } from 'expo-router';
