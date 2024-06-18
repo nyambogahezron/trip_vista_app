@@ -22,6 +22,7 @@ import Animated, {
   useAnimatedStyle,
   useScrollViewOffset,
 } from 'react-native-reanimated';
+import images from '../../constants/images.js';
 
 const { width } = Dimensions.get('window');
 const IMG_HEIGHT = 320;
@@ -97,7 +98,7 @@ const DetailsPage = () => {
           contentContainerStyle={{ paddingBottom: 150 }}
         >
           <Animated.Image
-            source={{ uri: listing.image }}
+            source={images[listing.image]}
             className=''
             style={[styles.image, imageAnimatedStyle]}
           />

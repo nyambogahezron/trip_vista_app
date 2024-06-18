@@ -2,9 +2,7 @@ const listingsData = [
   {
     id: 1,
     name: 'Beach Item 1',
-    image:
-      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmzY1kTRum1uX5q_t66hk6M_LzaFyT9j9dNA&s',
-    description: 'Description 1',
+    image: 'beach',
     rating: 5,
     price: 100,
     duration: '1 hour',
@@ -14,8 +12,7 @@ const listingsData = [
   {
     id: 2,
     name: 'Beach Item 2',
-    image:
-      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmzY1kTRum1uX5q_t66hk6M_LzaFyT9j9dNA&s',
+    image: 'river',
     description: 'Description 2',
     rating: 4,
     price: 80,
@@ -26,8 +23,7 @@ const listingsData = [
   {
     id: 3,
     name: 'Beach Item 3',
-    image:
-      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmzY1kTRum1uX5q_t66hk6M_LzaFyT9j9dNA&s',
+    image: 'waterfall',
     description: 'Description 3',
     rating: 3,
     price: 60,
@@ -38,8 +34,7 @@ const listingsData = [
   {
     id: 4,
     name: 'Beach Item 4',
-    image:
-      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmzY1kTRum1uX5q_t66hk6M_LzaFyT9j9dNA&s',
+    image: 'beach',
     description: 'Description 4',
     rating: 2,
     price: 40,
@@ -50,9 +45,7 @@ const listingsData = [
   {
     id: 9,
     name: 'Sandy Cove Retreat',
-    image:
-      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmzY1kTRum1uX5q_t66hk6M_LzaFyT9j9dNA&s',
-    description: 'A serene beachfront cottage with stunning views.',
+    image: 'mountain',
     rating: 4.5,
     price: 120,
     duration: '2 hours',
@@ -62,8 +55,7 @@ const listingsData = [
   {
     id: 10,
     name: 'Sunset Bliss Beach House',
-    image:
-      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmzY1kTRum1uX5q_t66hk6M_LzaFyT9j9dNA&s',
+    image: 'city',
     description:
       'Relax in this cozy beach house with private access to the shore.',
     rating: 4.2,
@@ -75,8 +67,7 @@ const listingsData = [
   {
     id: 11,
     name: 'Palm Paradise Resort',
-    image:
-      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmzY1kTRum1uX5q_t66hk6M_LzaFyT9j9dNA&s',
+    image: 'history',
     description: 'Luxurious beachfront resort surrounded by palm trees.',
     rating: 4.8,
     price: 180,
@@ -87,8 +78,7 @@ const listingsData = [
   {
     id: 12,
     name: 'Seashell Cove Cabins',
-    image:
-      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmzY1kTRum1uX5q_t66hk6M_LzaFyT9j9dNA&s',
+    image: 'forest',
     description: 'Quaint cabins nestled along the shoreline.',
     rating: 3.7,
     price: 70,
@@ -99,8 +89,7 @@ const listingsData = [
   {
     id: 13,
     name: 'Majestic Peak Lodge',
-    image:
-      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmzY1kTRum1uX5q_t66hk6M_LzaFyT9j9dNA&s',
+    image: 'lake',
     description:
       'Rustic log cabins at the base of a breathtaking mountain peak.',
     rating: 4.6,
@@ -112,8 +101,7 @@ const listingsData = [
   {
     id: 14,
     name: 'Cloudtop Retreat',
-    image:
-      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmzY1kTRum1uX5q_t66hk6M_LzaFyT9j9dNA&s',
+    image: 'park',
     description: 'Secluded chalets with panoramic views of the valley below.',
     rating: 4.4,
     price: 110,
@@ -124,8 +112,7 @@ const listingsData = [
   {
     id: 15,
     name: 'Evergreen Escape',
-    image:
-      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmzY1kTRum1uX5q_t66hk6M_LzaFyT9j9dNA&s',
+    image: 'forest',
     description: 'Cozy cabins surrounded by towering evergreen trees.',
     rating: 4.9,
     price: 200,
@@ -136,8 +123,7 @@ const listingsData = [
   {
     id: 16,
     name: 'Mountain Item 1',
-    image:
-      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmzY1kTRum1uX5q_t66hk6M_LzaFyT9j9dNA&s',
+    image: 'forest',
     description: 'Description 1',
     rating: 5,
     price: 100,
@@ -148,8 +134,7 @@ const listingsData = [
   {
     id: 17,
     name: 'Mountain Item 2',
-    image:
-      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmzY1kTRum1uX5q_t66hk6M_LzaFyT9j9dNA&s',
+    image: 'beach',
     description: 'Description 2',
     rating: 4,
     price: 80,
@@ -160,8 +145,7 @@ const listingsData = [
   {
     id: 18,
     name: 'Mountain Item 3',
-    image:
-      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmzY1kTRum1uX5q_t66hk6M_LzaFyT9j9dNA&s',
+    image: 'lake',
     description: 'Description 3',
     rating: 3,
     price: 60,
@@ -172,8 +156,7 @@ const listingsData = [
   {
     id: 19,
     name: 'Mountain Item 4',
-    image:
-      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmzY1kTRum1uX5q_t66hk6M_LzaFyT9j9dNA&s',
+    image: 'mountain',
     description: 'Description 4',
     rating: 2,
     price: 40,

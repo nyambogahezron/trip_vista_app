@@ -2,7 +2,6 @@ import { View, Text, FlatList, Image } from 'react-native';
 import listingsData from '../utils/listingsData';
 import Listing from './Listing';
 import { useEffect, useState } from 'react';
-import TravelGroups from './TravelGroups';
 const Listings = ({ selectedCategory }) => {
   const [data, setData] = useState([]);
 
@@ -16,9 +15,7 @@ const Listings = ({ selectedCategory }) => {
       (item) => item.category === selectedCategory
     );
     setData(selectedData);
-    // return () => {
-    //   setData([]);
-    // };
+   
   }, [selectedCategory]);
 
   return (

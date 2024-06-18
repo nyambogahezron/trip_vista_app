@@ -2,6 +2,7 @@ import Colors from '@/constants/Colors';
 import { Feather, Ionicons } from '@expo/vector-icons';
 import { Link } from 'expo-router';
 import { View, Text, TouchableOpacity, Image } from 'react-native';
+import images from '../constants/images';
 const Listings = ({ id, name, price, location, image}) => {
   return (
     <View>
@@ -9,9 +10,7 @@ const Listings = ({ id, name, price, location, image}) => {
         <TouchableOpacity className='w-60 bg-white p-2 rounded-lg mr-4 mb-4 shadow-sm shadow-orange-600 border border-[#f3f3f3]'>
           <View className='relative mb-3'>
             <Image
-              source={{
-                uri: `${image}`,
-              }}
+              source={images[image]}
               className='h-52  w-56 rounded-lg p-2'
             />
             <View className='absolute bottom-[-20px] right-4 bg-main p-3 rounded-full border-4 border-white'>
