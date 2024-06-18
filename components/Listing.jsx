@@ -1,21 +1,36 @@
 import Colors from '@/constants/Colors';
 import { Feather, Ionicons } from '@expo/vector-icons';
 import { Link } from 'expo-router';
-import { View, Text, TouchableOpacity, Image } from 'react-native';
+import { View, Text, TouchableOpacity, Image, Dimensions } from 'react-native';
 import images from '../constants/images';
-const Listings = ({ id, name, price, location, image}) => {
+const { width } = Dimensions.get('window');
+const Listing = ({
+  id,
+  name,
+  price,
+  location,
+  image,
+  customCardStyle,
+  customImageStyle,
+  width,
+  showFavIcon,
+}) => {
   return (
-    <View>
+    <View style={{ width: width }}>
       <Link href={`/listing/${id}`} asChild>
-        <TouchableOpacity className='w-60 bg-white p-2 rounded-lg mr-4 mb-4 shadow-sm shadow-orange-600 border border-[#f3f3f3]'>
+        <TouchableOpacity
+          className={`w-60 bg-white p-2 rounded-lg mr-4 mb-4 shadow-sm shadow-orange-600 border border-[#f3f3f3] ${customCardStyle} `}
+        >
           <View className='relative mb-3'>
             <Image
               source={images[image]}
-              className='h-52  w-56 rounded-lg p-2'
+              className={`h-52  w-56 rounded-lg p-2 ${customImageStyle}`}
             />
-            <View className='absolute bottom-[-20px] right-4 bg-main p-3 rounded-full border-4 border-white'>
-              <Feather name='bookmark' size={17} color={Colors.white} />
-            </View>
+            {!showFavIcon && (
+              <View className='absolute bottom-[-20px] right-4 bg-main p-3 rounded-full border-4 border-white'>
+                <Feather name='bookmark' size={17} color={Colors.white} />
+              </View>
+            )}
           </View>
 
           <Text
@@ -47,4 +62,4 @@ const Listings = ({ id, name, price, location, image}) => {
     </View>
   );
 };
-export default Listings;
+export default Listing;

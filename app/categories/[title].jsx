@@ -1,13 +1,16 @@
 import { Stack, router, useLocalSearchParams } from 'expo-router';
-import { View, Text, FlatList, TouchableOpacity } from 'react-native';
+import { View, Text, FlatList, TouchableOpacity, Dimensions } from 'react-native';
 import Listing from '../../components/Listing.jsx';
 import listingData from '../../utils/listingsData.js';
 import { Feather } from '@expo/vector-icons';
+import { SafeAreaView } from 'react-native-safe-area-context';
+const { width } = Dimensions.get('window');
+
 const CategoriesDetails = () => {
   const { title } = useLocalSearchParams();
   const listing = listingData.filter((item) => item.category === title);
   return (
-    <>
+    <SafeAreaView className='flex-1'>
       <Stack.Screen
         options={{
           headerShadowVisible: false,
@@ -31,7 +34,7 @@ const CategoriesDetails = () => {
           ),
         }}
       />
-      <View className='mt-2 bg-bgColor items-center flex-1 h-full w-full'>
+      <View className=' bg-bgColor items-center'>
         <FlatList
           data={listing}
           keyExtractor={(item) => item.id}
@@ -43,11 +46,14 @@ const CategoriesDetails = () => {
               price={item.price}
               location={item.location}
               image={item.image}
+              customCardStyle='w-full m-1'
+              width={width}
+              customImageStyle='h-60 w-full'
             />
           )}
         />
       </View>
-    </>
+    </SafeAreaView>
   );
 };
 export default CategoriesDetails;
