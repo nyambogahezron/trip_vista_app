@@ -1,9 +1,12 @@
-import { View, Text } from 'react-native'
+import { View, Text, SafeAreaView } from 'react-native';
+import SearchInput from '../../components/SearchInput';
 const Search = () => {
   return (
-    <View>
-      <Text>Search</Text>
-    </View>
-  )
-}
-export default Search
+    <SafeAreaView className='bg-bgColor'>
+      <View className='flex-row my-3'>
+        <SearchInput />
+      </View>
+    </SafeAreaView>
+  );
+};
+export default Search;

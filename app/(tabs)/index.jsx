@@ -3,9 +3,7 @@ import { router } from 'expo-router';
 import {
   View,
   Text,
-  TextInput,
   Image,
-  ScrollView,
   TouchableOpacity,
   StatusBar,
   FlatList,
@@ -15,6 +13,8 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import CategoriesButtons from '../../components/CategoriesButtons';
 import Listings from '../../components/Listings';
 import TravelGroups from '@/components/TravelGroups';
+import SearchInput from '@/components/SearchInput';
+
 const HomePage = () => {
   const [selectedCategory, setSelectedCategory] = useState('All');
   
@@ -53,13 +53,7 @@ const HomePage = () => {
             </View>
             {/* Search Bar */}
             <View className='flex-row my-3'>
-              <View className='flex-1 flex-row items-center mx-4 p-2 bg-white rounded-[10px]'>
-                <Ionicons name='search-outline' size={18} color='#000' />
-                <TextInput
-                  placeholder='Search place...'
-                  className='flex-1 ml-2 text-gray-700 font-rbold text-base'
-                />
-              </View>
+              <SearchInput />
               <View className='bg-main rounded-[10px] p-2 mr-3'>
                 <Ionicons name='options' size={25} color='#fff' />
               </View>
