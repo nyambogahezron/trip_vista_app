@@ -1,5 +1,10 @@
 import { Stack, router, useLocalSearchParams } from 'expo-router';
-import { View, Text, FlatList, TouchableOpacity, Dimensions } from 'react-native';
+import {
+  View,
+  FlatList,
+  TouchableOpacity,
+  Dimensions,
+} from 'react-native';
 import Listing from '../../components/Listing.jsx';
 import listingData from '../../utils/listingsData.js';
 import { Feather } from '@expo/vector-icons';
@@ -9,8 +14,9 @@ const { width } = Dimensions.get('window');
 const CategoriesDetails = () => {
   const { title } = useLocalSearchParams();
   const listing = listingData.filter((item) => item.category === title);
+ 
   return (
-    <SafeAreaView className='flex-1'>
+    <SafeAreaView  className='flex-1'>
       <Stack.Screen
         options={{
           headerShadowVisible: false,
@@ -34,7 +40,7 @@ const CategoriesDetails = () => {
           ),
         }}
       />
-      <View className=' bg-bgColor items-center'>
+      <View className='mt-[-30px] bg-bgColor items-center'>
         <FlatList
           data={listing}
           keyExtractor={(item) => item.id}
