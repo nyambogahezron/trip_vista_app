@@ -22,6 +22,8 @@ const images = {
   cave: 'https://media.istockphoto.com/id/157696633/photo/african-beach.jpg?s=612x612&w=0&k=20&c=gwiDHUQtIJjJXjd6-WdOTHTHhhyzCg_1dNmEECPpJ-Y=',
   landmark:
     'https://media.istockphoto.com/id/157696633/photo/african-beach.jpg?s=612x612&w=0&k=20&c=gwiDHUQtIJjJXjd6-WdOTHTHhhyzCg_1dNmEECPpJ-Y=',
+  island:
+    'https://media.istockphoto.com/id/157696633/photo/african-beach.jpg?s=612x612&w=0&k=20&c=gwiDHUQtIJjJXjd6-WdOTHTHhhyzCg_1dNmEECPpJ-Y=',
 };
 
 export default images;

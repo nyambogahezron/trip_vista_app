@@ -17,7 +17,7 @@ import SearchInput from '@/components/SearchInput';
 
 const HomePage = () => {
   const [selectedCategory, setSelectedCategory] = useState('All');
-  
+
   return (
     <SafeAreaView className='bg-bgColor'>
       <FlatList
@@ -26,7 +26,9 @@ const HomePage = () => {
             <View className='flex flex-row  items-center justify-between py-2 px-4'>
               <TouchableOpacity onPress={() => router.replace('/profile')}>
                 <Image
-                  source={require('../../assets/images/user.png')}
+                  source={{
+                    uri: 'https://static.vecteezy.com/system/resources/thumbnails/005/129/844/small_2x/profile-user-icon-isolated-on-white-background-eps10-free-vector.jpg',
+                  }}
                   className='w-10 h-10 rounded-full'
                 />
               </TouchableOpacity>
@@ -60,7 +62,10 @@ const HomePage = () => {
             </View>
             {/* Categories */}
             <View>
-              <CategoriesButtons setSelectedCategory={setSelectedCategory} selectedCategory={selectedCategory} />
+              <CategoriesButtons
+                setSelectedCategory={setSelectedCategory}
+                selectedCategory={selectedCategory}
+              />
               <View>
                 <Listings selectedCategory={selectedCategory} />
               </View>
@@ -72,7 +77,6 @@ const HomePage = () => {
             <TravelGroups />
           </View>
         )}
-       
       />
       <StatusBar barStyle='dark-content' backgroundColor='#f3f3f3' />
     </SafeAreaView>
