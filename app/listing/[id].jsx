@@ -98,7 +98,7 @@ const DetailsPage = () => {
           contentContainerStyle={{ paddingBottom: 150 }}
         >
           <Animated.Image
-            source={images[listing.image]}
+            source={ {uri: images[listing.image] }}
             className=''
             style={[styles.image, imageAnimatedStyle]}
           />

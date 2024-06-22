@@ -23,7 +23,7 @@ const Listing = ({
         >
           <View className='relative mb-3'>
             <Image
-              source={images[image]}
+              source={{ uri: images[image] }}
               className={`h-52  w-56 rounded-lg p-2 ${customImageStyle}`}
             />
             {!showFavIcon && (

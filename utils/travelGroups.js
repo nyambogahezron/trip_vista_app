@@ -10,30 +10,34 @@ let travelAgency = [
   {
     id: 2,
     name: 'Global Adventures',
-    image: 'global_adventures.jpg',
+    image:
+      'https://netstorage-tuko.akamaized.net/images/039181e913feda51.jpg?imwidth=900',
     rating: 4.7,
     reviews: 3789,
   },
   {
     id: 3,
     name: 'Journey Masters',
-    image: 'journey_masters.jpg',
+    image:
+      'https://netstorage-tuko.akamaized.net/images/039181e913feda51.jpg?imwidth=900',
     rating: 4.6,
     reviews: 3956,
   },
   {
     id: 4,
     name: 'Voyage Gurus',
-    image: 'voyage_gurus.jpg',
+    image:
+      'https://netstorage-tuko.akamaized.net/images/039181e913feda51.jpg?imwidth=900',
     rating: 4.8,
     reviews: 4123,
   },
   {
     id: 5,
     name: 'Trip Architects',
-    image: 'trip_architects.jpg',
+    image:
+      'https://netstorage-tuko.akamaized.net/images/039181e913feda51.jpg?imwidth=900',
     rating: 4.4,
     reviews: 3876,
   },
 ];
- export default travelAgency;
+export default travelAgency;

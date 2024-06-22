@@ -15,7 +15,9 @@ const TravelGroups = () => {
           <View className='flex flex-row items-center border-2 border-[#f3f3f3] shadow-sm shadow-main bg-white h-32 w-72 rounded-lg ml-1 p-1 mb-4'>
             <View className=' rounded-lg mr-2'>
               <Image
-                source={require('../assets/images/travel.png')}
+                source={{
+                  uri: 'https://media.istockphoto.com/id/587892720/vector/africa-single-states-political-map.jpg?s=1024x1024&w=is&k=20&c=c_EqMIEm6JykhsFyxSJACL-xVT76FtK_wCVu_3m5OWA=',
+                }}
                 className='w-20 h-full'
                 resizeMode='cover'
                 style={{ borderRadius: 10, overflow: 'hidden' }}
@@ -26,8 +28,10 @@ const TravelGroups = () => {
 
               <View className='flex flex-row items-center gap-1 mt-2'>
                 <Ionicons name='star' size={20} color='#FFD700' />
-              <Text className='text-lg font-pbold'>{item.rating}</Text>
-              <Text className='text-sm font-pbold text-gray-300'>({item.reviews})Reviews</Text>
+                <Text className='text-lg font-pbold'>{item.rating}</Text>
+                <Text className='text-sm font-pbold text-gray-300'>
+                  ({item.reviews})Reviews
+                </Text>
               </View>
             </View>
           </View>

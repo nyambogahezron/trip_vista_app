@@ -119,7 +119,7 @@ const Item = ({
   return (
     <View style={styles.itemStyle}>
       <Animated.Image
-        source={imageUri}
+        source={{ uri: imageUri }}
         style={[
           styles.imageStyle,
           {
