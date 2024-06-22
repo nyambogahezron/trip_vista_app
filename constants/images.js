@@ -1,6 +1,6 @@
 const images = {
   beach: require('../assets/images/beach.png'),
-  mountain: require('../assets/images/mountain.jpg'),
+  mountain: require('../assets/images/mountain.png'),
   forest: require('../assets/images/forest.png'),
   city: require('../assets/images/city.png'),
   history: require('../assets/images/history.png'),

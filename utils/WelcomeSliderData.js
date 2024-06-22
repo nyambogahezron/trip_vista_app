@@ -1,7 +1,7 @@
 const data = [
   {
     type: 'Beaches',
-    imageUri: require('../assets/images/beach.jpg'),
+    imageUri: require('../assets/images/beach.png'),
     heading: 'Sunset Bliss',
     description:
       'Experience the serene beauty of vibrant sunsets by the beach.',
@@ -10,7 +10,7 @@ const data = [
   },
   {
     type: 'Mountains',
-    imageUri: require('../assets/images/mountain.jpg'),
+    imageUri: require('../assets/images/mountain.png'),
     heading: 'Majestic Peaks',
     description: 'Explore the grandeur and tranquility of towering mountains.',
     key: 'second',
@@ -34,4 +34,4 @@ const data = [
     color: '#a1e3a1',
   },
 ];
- export default data;
+export default data;
