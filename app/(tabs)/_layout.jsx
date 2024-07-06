@@ -9,7 +9,7 @@ const TabLayout = () => {
       screenOptions={{
         tabBarShowLabel: false,
         tabBarInactiveTintColor: Colors.black,
-        tabBarActiveTintColor: '#999',
+        tabBarActiveTintColor: '#ff7f36',
         tabBarStyle: {
           backgroundColor: Colors.bgColor,
           borderTopWidth: 0,
@@ -47,15 +47,15 @@ const TabLayout = () => {
                 backgroundColor: Colors.primaryColor,
                 paddingHorizontal: 16,
                 paddingVertical: 12,
-                borderRadius: 10,
+                borderRadius: 50,
                 height: 45,
               }}
             >
               <Ionicons
                 size={24}
                 name='search-outline'
-                color={color}
-                className='font-pbold'
+                color='#000'
+                className='font-pblack text-black'
               />
             </View>
           ),

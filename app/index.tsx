@@ -264,31 +264,31 @@ export default function WelcomePage() {
           </View>
         ))}
       </AnimatedPagerView>
-      <TouchableOpacity  onPress={() => router.push('/(tabs)')}>
-      <Animatable.View
-        animation={'pulse'}
-        easing='ease-in-out'
-        iterationCount={'infinite'}
-        style={{
-          position: 'absolute',
-          bottom: 100,
-          opacity: 0.7,
-          marginBottom: 10,
-          left: width / 2 - 20,
-          height: 60,
-          width: 60,
-          padding: 10,
-          backgroundColor: '#00BCC9',
-          borderRadius: 50,
-          alignItems: 'center',
-          justifyContent: 'center',
-          borderWidth: 3,
-        }}
-      >
-        <Text style={{ color: '#333', fontSize: 20, fontWeight: 'bold' }}>
-          Go
-        </Text>
-      </Animatable.View>
+      <TouchableOpacity onPress={() => router.push('/(tabs)')}>
+        <Animatable.View
+          animation={'pulse'}
+          easing='ease-in-out'
+          iterationCount={'infinite'}
+          style={{
+            position: 'absolute',
+            bottom: 80,
+            opacity: 0.7,
+            marginBottom: 10,
+            left: width / 2 - 20,
+            height: 60,
+            width: 60,
+            padding: 10,
+            backgroundColor: '#00BCC9',
+            borderRadius: 50,
+            alignItems: 'center',
+            justifyContent: 'center',
+            borderWidth: 3,
+          }}
+        >
+          <Text style={{ color: '#333', fontSize: 20, fontWeight: 'bold' }}>
+            Go
+          </Text>
+        </Animatable.View>
       </TouchableOpacity>
       <Pagination
         scrollOffsetAnimatedValue={scrollOffsetAnimatedValue}

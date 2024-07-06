@@ -21,6 +21,8 @@ const HomePage = () => {
   return (
     <SafeAreaView className='bg-bgColor'>
       <FlatList
+      showsHorizontalScrollIndicator={false}
+      showsVerticalScrollIndicator={false}
         ListHeaderComponent={() => (
           <>
             <View className='flex flex-row  items-center justify-between py-2 px-4'>

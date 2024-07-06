@@ -2,7 +2,7 @@ const data = [
   {
     type: 'Beaches',
     imageUri:
-      'https://media.istockphoto.com/id/1455430684/photo/drone-shot-over-the-beach-of-the-coastal-part-of-mombasa-kenya-at-sunrise.jpg?s=612x612&w=0&k=20&c=Qq2Mfvk850PwrothLUruu4q2hzbaNDlPex2V79MnY1Y=',
+      'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pexels.com%2Fsearch%2Fbeach%2F&psig=AOvVaw25LNJrP0NLuthvzHIGVU53&ust=1719488253392000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCLDR3oaX-YYDFQAAAAAdAAAAABAE',
     heading: 'Sunset Bliss',
     description:
       'Experience the serene beauty of vibrant sunsets by the beach.',
