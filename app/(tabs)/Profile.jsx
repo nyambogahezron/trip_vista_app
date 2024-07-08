@@ -57,10 +57,10 @@ const Profile = () => {
             <Image
               className='rounded-full h-32 w-32'
               source={{
-                uri: 'https://static.vecteezy.com/system/resources/thumbnails/005/129/844/small_2x/profile-user-icon-isolated-on-white-background-eps10-free-vector.jpg',
+                uri: 'https://cdn-icons-png.flaticon.com/512/9187/9187604.png',
               }}
             />
-            <TouchableOpacity className='absolute bottom-1 right-1 w-10 h-10 bg-[#f7f8f5] p-1 border-2 border-gray-200 rounded-full items-center justify-center'>
+            <TouchableOpacity className='absolute bottom-1 right-1 w-10 h-10 bg-[#f7f8f5] p-1 border-2 border-[#fff] rounded-full items-center justify-center'>
               <Icon name='camera' size={24} color='#ff7f36' />
             </TouchableOpacity>
           </View>
