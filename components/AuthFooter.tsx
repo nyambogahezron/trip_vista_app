@@ -1,6 +1,20 @@
 import { router } from 'expo-router';
+import React from 'react';
 import { View, Text, TouchableOpacity, Image } from 'react-native';
-const AuthFooter = ({ desc, title, link, linkText }) => {
+
+interface AuthFooterProps {
+  desc: string;
+  title: string;
+  link: string;
+  linkText?: string | null;
+}
+
+const AuthFooter: React.FC<AuthFooterProps> = ({
+  desc,
+  title,
+  link,
+  linkText,
+}) => {
   return (
     <>
       <View className='flex flex-row gap-2 align-center my-4 mx-auto'>

@@ -3,8 +3,21 @@ import { Feather, Ionicons } from '@expo/vector-icons';
 import { Link } from 'expo-router';
 import { View, Text, TouchableOpacity, Image, Dimensions } from 'react-native';
 import images from '../constants/images';
+import React from 'react';
 const { width } = Dimensions.get('window');
-const Listing = ({
+
+interface ListingProps {
+  id: number;
+  name: string;
+  price: number;
+  location: string;
+  image: string;
+  customCardStyle: string;
+  customImageStyle: string;
+  width: number;
+  showFavIcon: boolean;
+}
+const Listing: React.FC<ListingProps> = ({
   id,
   name,
   price,
@@ -23,7 +36,7 @@ const Listing = ({
         >
           <View className='relative mb-3'>
             <Image
-              source={{ uri: images[image] }}
+              source={{ uri: images[image as keyof typeof images] }}
               className={`h-52  w-56 rounded-lg p-2 ${customImageStyle}`}
             />
             {!showFavIcon && (

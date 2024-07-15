@@ -3,7 +3,6 @@ import {
   View,
   Text,
   TextInput,
-  Image,
   TouchableOpacity,
   SafeAreaView,
   StatusBar,
@@ -54,7 +53,7 @@ const Login = () => {
           />
         </View>
       </View>
-      <StatusBar style='light-content' backgroundColor='transparent' />
+      <StatusBar barStyle='light-content' backgroundColor='transparent' />
     </SafeAreaView>
   );
 };

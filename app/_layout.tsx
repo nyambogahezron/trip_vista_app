@@ -1,7 +1,8 @@
 import { useFonts } from 'expo-font';
 import { SplashScreen, Stack } from 'expo-router';
 import { useEffect } from 'react';
-
+import 'react-native-reanimated';
+import 'react-native-gesture-handler';
 SplashScreen.preventAutoHideAsync(); //prevent splash screen from auto hiding till fonts are loaded
 
 const RootLayout = () => {

@@ -4,6 +4,7 @@ import AuthHeader from '../../components/AuthHeader';
 import AuthFooter from '../../components/AuthFooter';
 import CustomButton from '../../components/CustomButton';
 import { EvilIcons } from '@expo/vector-icons';
+import { router } from 'expo-router';
 
 const Register = () => {
   return (

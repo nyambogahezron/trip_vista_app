@@ -41,9 +41,9 @@ const Categories = () => {
         <FlatList
           data={filteredCategoriesData}
           renderItem={CategoriesCard}
-          keyExtractor={(item) => item.id}
+          keyExtractor={(item) => item.id.toString()}
           numColumns={2}
-          contentContainerClassName='px-2'
+          contentContainerStyle={{ paddingHorizontal: 8 }}
           showsVerticalScrollIndicator={false}
         />
       </View>

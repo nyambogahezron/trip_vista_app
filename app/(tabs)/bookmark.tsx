@@ -1,10 +1,5 @@
 import { Stack, router, useLocalSearchParams } from 'expo-router';
-import {
-  View,
-  FlatList,
-  TouchableOpacity,
-  Dimensions,
-} from 'react-native';
+import { View, FlatList, TouchableOpacity, Dimensions } from 'react-native';
 import Listing from '../../components/Listing.jsx';
 import listingData from '../../utils/listingsData.js';
 import { Feather } from '@expo/vector-icons';
@@ -23,7 +18,7 @@ const Favorite = () => {
           headerStyle: { backgroundColor: '#f2f2f3' },
           headerLeft: () => (
             <TouchableOpacity
-            className='ml-3'
+              className='ml-3'
               onPress={() => router.back()}
               style={{
                 backgroundColor: 'rgba(255,255,255,0.7)',
@@ -41,12 +36,12 @@ const Favorite = () => {
       <View className=' bg-bgColor items-center mt-[-30px]'>
         <FlatList
           data={listingData}
-          keyExtractor={(item) => item.id}
+          keyExtractor={(item) => item.id.toString()}
           showsVerticalScrollIndicator={false}
           renderItem={({ item }) => (
             <Listing
               id={item.id}
-              name={item.title}
+              name={item.name}
               price={item.price}
               location={item.location}
               image={item.image}
