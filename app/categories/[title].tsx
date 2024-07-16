@@ -5,8 +5,8 @@ import {
   TouchableOpacity,
   Dimensions,
 } from 'react-native';
-import Listing from '../../components/Listing.jsx';
-import listingData from '../../utils/listingsData.js';
+import Listing from '../../components/Listing';
+import listingData from '../../utils/listingsData';
 import { Feather } from '@expo/vector-icons';
 import { SafeAreaView } from 'react-native-safe-area-context';
 const { width } = Dimensions.get('window');
@@ -43,12 +43,12 @@ const CategoriesDetails = () => {
       <View className='mt-[-30px] bg-bgColor items-center'>
         <FlatList
           data={listing}
-          keyExtractor={(item) => item.id}
+          keyExtractor={(item) => item.id.toString()}
           showsVerticalScrollIndicator={false}
           renderItem={({ item }) => (
             <Listing
               id={item.id}
-              name={item.title}
+              name={item.name}
               price={item.price}
               location={item.location}
               image={item.image}

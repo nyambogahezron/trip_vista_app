@@ -6,7 +6,7 @@ import {
   StyleSheet,
 } from 'react-native';
 import { Stack, useLocalSearchParams, useRouter } from 'expo-router';
-import listingData from '../../utils/listingsData.js';
+import listingData from '../../utils/listingsData';
 import {
   Feather,
   FontAwesome,
@@ -98,7 +98,7 @@ const DetailsPage = () => {
           contentContainerStyle={{ paddingBottom: 150 }}
         >
           <Animated.Image
-            source={ {uri: images[listing.image] }}
+            source={{ uri: images[listing.image] }}
             className=''
             style={[styles.image, imageAnimatedStyle]}
           />

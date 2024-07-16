@@ -15,7 +15,7 @@ interface ListingProps {
   customCardStyle: string;
   customImageStyle: string;
   width: number;
-  showFavIcon: boolean;
+  showFavIcon?: boolean;
 }
 const Listing: React.FC<ListingProps> = ({
   id,
