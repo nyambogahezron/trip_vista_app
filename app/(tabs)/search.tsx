@@ -1,4 +1,4 @@
-import { View, Text, SafeAreaView } from 'react-native';
+import { View,  SafeAreaView } from 'react-native';
 import SearchInput from '../../components/SearchInput';
 const Search = () => {
   return (

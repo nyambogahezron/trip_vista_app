@@ -1,3 +1,4 @@
+import React, { useEffect, useState } from 'react';
 import { Ionicons } from '@expo/vector-icons';
 import { router } from 'expo-router';
 import {
@@ -8,24 +9,26 @@ import {
   StatusBar,
   FlatList,
 } from 'react-native';
-import { useEffect, useState } from 'react';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import CategoriesButtons from '../../components/CategoriesButtons';
-import Listings from '../../components/Listings';
+import CategoriesButtons from '@/components/CategoriesButtons';
+import Listings from '@/components/Listings';
 import TravelGroups from '@/components/TravelGroups';
 import SearchInput from '@/components/SearchInput';
 import LoadingScreen from '@/components/LoadingScreen';
+
 const HomePage = () => {
-  const [selectedCategory, setSelectedCategory] = useState('All');
-  const [isLoading, setLoading] = useState(true);
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     setLoading(false);
-  //   }, 2000);
-  // }, []);
+  const [selectedCategory, setSelectedCategory] = useState<string>('All');
+  const [isLoading, setLoading] = useState<boolean>(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
-    <SafeAreaView className='bg-bgColor'>
+    <SafeAreaView className='bg-bgColor flex-1'>
       {isLoading ? (
         <LoadingScreen />
       ) : (
@@ -34,7 +37,7 @@ const HomePage = () => {
           showsVerticalScrollIndicator={false}
           ListHeaderComponent={() => (
             <>
-              <View className='flex flex-row  items-center justify-between py-2 px-4'>
+              <View className='flex flex-row items-center justify-between py-2 px-4'>
                 <TouchableOpacity onPress={() => router.replace('/profile')}>
                   <Image
                     source={{
@@ -56,11 +59,11 @@ const HomePage = () => {
                     shadowRadius: 3,
                   }}
                 >
-                  <Ionicons name='notifications' size={28} color='#000' />
+                  <Ionicons name='notifications' size={28} />
                 </TouchableOpacity>
               </View>
               <View>
-                <Text className='text-xl font-psemibold ml-4 my-2'>
+                <Text className='text-xl font-psemibold ml-4 my-2 text-red-700'>
                   Explore the beautiful world!
                 </Text>
               </View>
@@ -90,6 +93,7 @@ const HomePage = () => {
           )}
         />
       )}
+
       <StatusBar barStyle='dark-content' backgroundColor='#f3f3f3' />
     </SafeAreaView>
   );

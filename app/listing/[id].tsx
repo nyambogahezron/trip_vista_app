@@ -1,3 +1,4 @@
+import React from 'react';
 import {
   View,
   Text,
@@ -22,17 +23,17 @@ import Animated, {
   useAnimatedStyle,
   useScrollViewOffset,
 } from 'react-native-reanimated';
-import images from '../../constants/images.js';
+import images from '../../constants/images';
 
 const { width } = Dimensions.get('window');
 const IMG_HEIGHT = 320;
 
 const DetailsPage = () => {
-  const { id } = useLocalSearchParams();
-  const listing = listingData.find((item) => item.id == id);
+  const { id } = useLocalSearchParams<{ id: string }>();
+  const listing = listingData.find((item) => item.id.toString());
   const router = useRouter();
 
-  const scrollRef = useAnimatedRef();
+  const scrollRef = useAnimatedRef<Animated.ScrollView>();
   const scrollOffset = useScrollViewOffset(scrollRef);
   const imageAnimatedStyle = useAnimatedStyle(() => {
     return {
@@ -54,6 +55,14 @@ const DetailsPage = () => {
       ],
     };
   });
+
+  if (!listing) {
+    return (
+      <View className='flex-1 justify-center items-center'>
+        <Text>Listing not found</Text>
+      </View>
+    );
+  }
 
   return (
     <>
@@ -98,7 +107,7 @@ const DetailsPage = () => {
           contentContainerStyle={{ paddingBottom: 150 }}
         >
           <Animated.Image
-            source={{ uri: images[listing.image] }}
+            source={{ uri: images[listing.image as keyof typeof images] }}
             className=''
             style={[styles.image, imageAnimatedStyle]}
           />
@@ -124,7 +133,7 @@ const DetailsPage = () => {
                 <View className='mt-5'>
                   <Text className='text-[12px] text-gray-400'>Duration</Text>
                   <Text className='text-sm font-pregular'>
-                    {listing.duration}Days
+                    {listing.duration} Days
                   </Text>
                 </View>
               </View>
@@ -139,7 +148,7 @@ const DetailsPage = () => {
                 <View className='mt-5'>
                   <Text className='text-[12px] text-gray-400'>Person</Text>
                   <Text className='text-sm font-pregular'>
-                    {listing.duration}
+                    {listing.price}
                   </Text>
                 </View>
               </View>
@@ -150,7 +159,7 @@ const DetailsPage = () => {
                 <View className='mt-5'>
                   <Text className='text-[12px] text-gray-400'>Rating</Text>
                   <Text className='text-sm font-pregular'>
-                    {listing.rating}Days
+                    {listing.rating} Days
                   </Text>
                 </View>
               </View>
@@ -192,6 +201,7 @@ const DetailsPage = () => {
     </>
   );
 };
+
 export default DetailsPage;
 
 const styles = StyleSheet.create({
