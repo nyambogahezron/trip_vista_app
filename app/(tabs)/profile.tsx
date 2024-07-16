@@ -1,13 +1,11 @@
-import { Feather } from '@expo/vector-icons';
+import { Feather, Ionicons } from '@expo/vector-icons';
 import { router, Stack } from 'expo-router';
-import Icon from 'react-native-vector-icons/Ionicons';
 import {
   View,
   Text,
   SafeAreaView,
   TouchableOpacity,
   StatusBar,
-  StyleSheet,
   Image,
 } from 'react-native';
 
@@ -37,7 +35,6 @@ const Profile = () => {
             color: '#333',
             fontSize: 20,
             fontWeight: 'bold',
-            alignSelf: 'center',
           },
         }}
       />
@@ -61,7 +58,7 @@ const Profile = () => {
               }}
             />
             <TouchableOpacity className='absolute bottom-1 right-1 w-10 h-10 bg-[#f7f8f5] p-1 border-2 border-[#fff] rounded-full items-center justify-center'>
-              <Icon name='camera' size={24} color='#ff7f36' />
+              <Ionicons name='camera' size={24} color='#ff7f36' />
             </TouchableOpacity>
           </View>
           <View className='mt-5 mx-3'>
@@ -86,7 +83,7 @@ const Profile = () => {
           </View>
         </View>
       )}
-      <StatusBar style='dark' backgroundColor='#fff' />
+      <StatusBar barStyle='dark-content' backgroundColor='#fff' />
     </SafeAreaView>
   );
 };
