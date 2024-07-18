@@ -15,7 +15,7 @@ import AuthFooter from '../../components/AuthFooter';
 const Login = () => {
   return (
     <SafeAreaView className='flex-1 bg-white h-full'>
-      <View className='flex-1'>
+      <View className='flex-1 h-full'>
         <AuthHeader title='Sign In' />
         <View className='p-8'>
           <Text className='text-xl bg-gradient-to-t from-sky-500 to-indigo-300 font-pbold mt-4 text-center'>

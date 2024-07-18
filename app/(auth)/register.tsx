@@ -12,11 +12,8 @@ const Register = () => {
       <AuthHeader title='Sign Up' />
 
       <View className='p-8'>
-        <View>
-          <TouchableOpacity className='items-center mt-4 mb-4 flex-row gap-2'>
-            <Text className='text-blue-500 text-lg mt-2 capitalize font-pregular'>
-              upload your profile picture
-            </Text>
+        <View className='flex items-end top-5'>
+          <TouchableOpacity className='flex mt-4 mb-4 bg-[#fff] rounded-full w-20 h-20 items-center justify-center'>
             <View className='flex items-center justify-center border-2 border-blue-300 rounded-full  h-14 w-14'>
               <EvilIcons
                 name='camera'
