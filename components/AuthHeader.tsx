@@ -1,6 +1,12 @@
 import { LinearGradient } from 'expo-linear-gradient';
-import { View, Text, Image} from 'react-native';
-const AuthHeader = ({ title }) => {
+import React from 'react';
+import { View, Text, Image } from 'react-native';
+
+interface AuthHeaderInterface {
+  title: string;
+}
+
+const AuthHeader: React.FC<AuthHeaderInterface> = ({ title }) => {
   return (
     <>
       <View className='relative flex-1 items-center'>
