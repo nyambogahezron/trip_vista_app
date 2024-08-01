@@ -1,4 +1,3 @@
-import React from 'react';
 import {
   View,
   Text,
@@ -33,6 +32,9 @@ const Login = () => {
             placeholder='Password'
             secureTextEntry
           />
+          <TextInput className='mt-8 border-b-2 border-gray-300 pb-2'
+          placeholder='image'
+           />
           <TouchableOpacity className='mt-2'>
             <Text className='text-blue-500'>Forgot Password?</Text>
           </TouchableOpacity>
