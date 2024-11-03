@@ -7,7 +7,7 @@ import {
   StyleSheet,
 } from 'react-native';
 import { Stack, useLocalSearchParams, useRouter } from 'expo-router';
-import listingData from '../../utils/listingsData';
+import listingData from '../../data/listingsData';
 import {
   Feather,
   FontAwesome,
@@ -147,9 +147,7 @@ const DetailsPage = () => {
                 </View>
                 <View className='mt-5'>
                   <Text className='text-[12px] text-gray-400'>Person</Text>
-                  <Text className='text-sm font-pregular'>
-                    {listing.price}
-                  </Text>
+                  <Text className='text-sm font-pregular'>{listing.price}</Text>
                 </View>
               </View>
               <View className='flex-row'>

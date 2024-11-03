@@ -13,7 +13,7 @@ import type { PagerViewOnPageScrollEventData } from 'react-native-pager-view';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import PagerView from 'react-native-pager-view';
 import * as Animatable from 'react-native-animatable';
-import data from '../utils/WelcomeSliderData';
+import data from '../data/WelcomeSliderData';
 import { router } from 'expo-router';
 
 const { width, height } = Dimensions.get('window');

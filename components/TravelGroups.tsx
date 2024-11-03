@@ -1,5 +1,5 @@
 import { View, Text, FlatList, Image } from 'react-native';
-import travelGroups from '../utils/travelGroups';
+import travelGroups from '../data/travelGroups';
 import { Ionicons } from '@expo/vector-icons';
 const TravelGroups = () => {
   return (

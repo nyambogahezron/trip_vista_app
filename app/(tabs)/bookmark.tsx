@@ -1,7 +1,7 @@
 import { Stack, router, useLocalSearchParams } from 'expo-router';
 import { View, FlatList, TouchableOpacity, Dimensions } from 'react-native';
 import Listing from '../../components/Listing';
-import listingData from '../../utils/listingsData';
+import listingData from '../../data/listingsData';
 import { Feather } from '@expo/vector-icons';
 import { SafeAreaView } from 'react-native-safe-area-context';
 const { width } = Dimensions.get('window');

@@ -1,5 +1,5 @@
 import { View, Text, FlatList, Image } from 'react-native';
-import listingsData from '../utils/listingsData';
+import listingsData from '../data/listingsData';
 import Listing from './Listing';
 import { useEffect, useState } from 'react';
 const Listings = ({ selectedCategory }) => {
@@ -15,7 +15,6 @@ const Listings = ({ selectedCategory }) => {
       (item) => item.category === selectedCategory
     );
     setData(selectedData);
-   
   }, [selectedCategory]);
 
   return (
@@ -41,7 +40,6 @@ const Listings = ({ selectedCategory }) => {
             selectedCategory={selectedCategory}
           />
         )}
-      
         // return when no listing found
         ListEmptyComponent={() => (
           <View className='flex flex-1 items-center ml-8 p-0 justify-center w-64 h-52 '>

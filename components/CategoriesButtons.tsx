@@ -1,6 +1,6 @@
 import { View, Text, TouchableOpacity } from 'react-native';
 import { FontAwesome } from '@expo/vector-icons';
-import categoriesData from '../utils/categoriesData';
+import categoriesData from '../data/categoriesData';
 import { useState, useEffect, useRef } from 'react';
 import { ScrollView } from 'react-native-gesture-handler';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
@@ -32,7 +32,6 @@ const CategoriesButtons: React.FC<CategoriesButtonsProps> = ({
   const handleButtonPress = (id: number, title: string) => {
     setSelectedCategory(title);
     setIsActiveIndex(id);
-   
   };
 
   return (

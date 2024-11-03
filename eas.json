@@ -5,24 +5,29 @@
   "build": {
     "development": {
       "developmentClient": true,
-      "distribution": "internal"
+      "distribution": "internal",
+      "channel": "development"
     },
     "preview": {
       "android": {
         "buildType": "apk"
       },
-      "distribution": "internal"
+      "distribution": "internal",
+      "channel": "preview"
     },
     "preview2": {
       "android": {
-        "gradleCommand": ":app:assembleRelease"
-      }
+        "gradleCommand": ":app:assembleRelease, :app:assembleDebug"
+      },
+      "channel": "preview2"
     },
     "preview3": {
-      "developmentClient": true
+      "developmentClient": true,
+      "channel": "preview3"
     },
     "preview4": {
-      "distribution": "internal"
+      "distribution": "internal",
+      "channel": "preview4"
     },
     "production": {
       "android": {
@@ -30,7 +35,8 @@
       },
       "ios": {
         "image": "latest"
-      }
+      },
+      "channel": "production"
     }
   },
   "submit": {

@@ -1,7 +1,7 @@
 import { View, TouchableOpacity, FlatList, SafeAreaView } from 'react-native';
 import { Feather } from '@expo/vector-icons';
 import { Stack, router } from 'expo-router';
-import categoriesData from '../../utils/categoriesData';
+import categoriesData from '../../data/categoriesData';
 import CategoriesCard from '../../components/CategoriesCard';
 
 const Categories = () => {
