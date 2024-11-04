@@ -127,7 +127,7 @@ const Item = ({
           },
         ]}
       />
-      <View style={styles.textContainer}>
+      {/* <View style={styles.textContainer}>
         <Animated.Text
           style={[
             styles.heading,
@@ -148,7 +148,7 @@ const Item = ({
         >
           {description}
         </Animated.Text>
-      </View>
+      </View> */}
     </View>
   );
 };
@@ -204,26 +204,12 @@ export default function WelcomePage() {
     <SafeAreaProvider style={styles.container}>
       <View
         style={{
-          width: 450,
-          height: 460,
+          width:width,
+          height: height,
           backgroundColor: '#99c1c4',
-          borderRadius: 215,
           position: 'absolute',
-          bottom: -80,
-          right: -36,
-          opacity: 0.2,
-        }}
-      ></View>
-
-      <View
-        style={{
-          width: 450,
-          height: 430,
-          backgroundColor: '#ac826a',
-          borderRadius: 215,
-          position: 'absolute',
-          top: -50,
-          left: -36,
+          bottom: 0,
+          right: 0,
           opacity: 0.2,
         }}
       ></View>
@@ -319,13 +305,7 @@ const styles = StyleSheet.create({
     height: height,
     resizeMode: 'cover',
     flex: 1,
-    paddingTop: 30,
-    borderBottomRightRadius: 45,
-    borderBottomLeftRadius: 45,
-    borderBottomWidth: 1,
-    borderBottomColor: '#fff',
-    marginBottom: 10,
-    opacity: 0.7,
+    opacity: 1,
   },
   textContainer: {
     alignItems: 'flex-start',

@@ -1,50 +1,63 @@
-# Welcome to your Expo app 👋
+# Trip Vista
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Welcome to **Trip Vista**! This app is designed to showcase amazing places to visit around the world.
+![Trip Vista Logo](./assets/logo.png)
 
-## Get started
+## Features
 
-1. Install dependencies
+- Discover popular tourist destinations
+- View detailed information about each place
+- Browse through stunning photos
+- Read reviews and ratings from other travelers
+- Save your favorite places for future reference
 
-   ```bash
-   npm install
-   ```
+## Installation
 
-2. Start the app
+To install and run the app, follow these steps:
 
-   ```bash
-    npx expo start
-   ```
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/myambogahezron/trip_vista.git
+    ```
+2. Navigate to the project directory:
+    ```bash
+    cd trip_vista
+    ```
+3. Install the dependencies:
+    ```bash
+    npm install
+    ```
+4. Start the application:
+    ```bash
+    npm start
+    ```
 
-In the output, you'll find options to open the app in a
+## Usage
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+Once the app is running, you can:
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+- Browse through the list of places
+- Click on a place to view more details
+- Use the search feature to find specific locations
+- Save places to your favorites list
 
-## Get a fresh project
+## Contributing
 
-When you're ready, run:
+We welcome contributions! Please follow these steps to contribute:
 
-```bash
-npm run reset-project
-```
+1. Fork the repository
+2. Create a new branch (`git checkout -b feature-branch`)
+3. Make your changes
+4. Commit your changes (`git commit -m 'Add some feature'`)
+5. Push to the branch (`git push origin feature-branch`)
+6. Open a pull request
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+## License
 
-## Learn more
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
-To learn more about developing your project with Expo, look at the following resources:
+## Contact
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+For any questions or suggestions, please contact us at [support@tripvista.com](mailto:support@tripvista.com).
 
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+Enjoy your journey with Trip Vista!
